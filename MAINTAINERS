@@ -1,0 +1,11 @@
+[people]
+  [people.themaz]
+    name = "Maziar Rezvani"
+    email = "maziar@rezvani.ca"
+    login = "themaz"
+
+[org]
+  [org.core]
+    people = [
+      "themaz"
+    ]
