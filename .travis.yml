@@ -1,0 +1,6 @@
+language: go
+sudo: false
+go:
+- 1.8.1
+script:
+- go build -ldflags "-s -w -X main.build=$DRONE_BUILD_NUMBER" -a -tags netgo
