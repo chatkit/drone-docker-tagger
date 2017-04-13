@@ -1,7 +1,6 @@
 # drone-docker
 
-[![Build][https://travis-ci.org/themaz/drone-docker-tagger.svg?branch=master]][https://travis-ci.org/themaz/drone-docker-tagger]
-[![Build Status](http://beta.drone.io/api/badges/themaz/drone-docker-tagger/status.svg)](http://beta.drone.io/themaz/drone-docker-tagger)
+[![Build](https://travis-ci.org/themaz/drone-docker-tagger.svg?branch=master)](https://travis-ci.org/themaz/drone-docker-tagger)
 [![Go Doc](https://godoc.org/github.com/themaz/drone-docker-tagger?status.svg)](http://godoc.org/github.com/themaz/drone-docker-tagger)
 [![Go Report](https://goreportcard.com/badge/github.com/themaz/drone-docker-tagger)](https://goreportcard.com/report/github.com/themaz/drone-docker-tagger)
 
