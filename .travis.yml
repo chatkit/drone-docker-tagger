@@ -1,6 +1,16 @@
 language: go
-sudo: false
+sudo: required
+services:
+  - docker
 go:
-- 1.8.1
+  - 1.8.1
 script:
-- go build -ldflags "-s -w -X main.build=$DRONE_BUILD_NUMBER" -a -tags netgo
+  - go build -ldflags "-s -w -X main.build=$DRONE_BUILD_NUMBER" -a -tags netgo
+  - docker build -t themaz/drone-docker-tagger .
+after_success:
+  - if [ "$TRAVIS_BRANCH" == "master" ]; then
+    docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
+    docker push themaz/drone-docker-tagger;
+    docker tag themaz/drone-docker-tagger themaz/drone-docker-tagger:0.1.$TRAVIS_BUILD_NUMBER;
+    docker push themaz/drone-docker-tagger:0.1.$TRAVIS_BUILD_NUMBER;
+    fi
