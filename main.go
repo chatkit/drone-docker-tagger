@@ -129,10 +129,6 @@ func main() {
 }
 
 func run(c *cli.Context) error {
-	fmt.Fprintf(os.Stdout, "+ %s\n", c.String("source_image"))
-	fmt.Fprintf(os.Stdout, "+ %s\n", c.String("source_image"))
-	fmt.Fprintf(os.Stdout, "+ %s\n", c.String("source_image"))
-	fmt.Fprintf(os.Stdout, "+ %s\n", c.String("source_image"))
 	plugin := Plugin{
 		Dryrun: c.Bool("dry-run"),
 		Login: Login{

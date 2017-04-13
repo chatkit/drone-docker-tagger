@@ -57,14 +57,6 @@ type (
 
 // SourceImageNoTag returns the SourceImage with the tag removed
 func (b Build) SourceImageNoTag() string {
-	fmt.Fprintf(os.Stdout, "+ %s\n", b.SourceImage)
-	fmt.Fprintf(os.Stdout, "+ %s\n", b.SourceImage)
-	fmt.Fprintf(os.Stdout, "+ %s\n", b.SourceImage)
-	fmt.Fprintf(os.Stdout, "+ %s\n", b.SourceImage)
-	fmt.Fprintf(os.Stdout, "+ %s\n", b.SourceImage)
-	fmt.Fprintf(os.Stdout, "+ %s\n", b.SourceImage)
-	fmt.Fprintf(os.Stdout, "+ %s\n", b.SourceImage)
-	fmt.Fprintf(os.Stdout, "+ %s\n", b.SourceImage)
 	return strings.SplitN(b.SourceImage, ":", 2)[0]
 }
 
